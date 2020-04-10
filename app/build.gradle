@@ -1,0 +1,60 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    android {
+        defaultConfig {
+            manifestPlaceholders = [
+                    onesignal_app_id               : '4bb84eb6-ebcc-4513-b975-31c4230c4f07',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.helptimebd.httech.hellobikroy"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0-alpha04'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha04'
+    implementation 'com.onesignal:OneSignal:[3.11.2, 3.99.99]'
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation 'com.google.firebase:firebase-config:19.1.2'
+
+
+}
+apply plugin: 'com.google.gms.google-services'

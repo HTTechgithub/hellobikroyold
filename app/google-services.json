@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "596230163999",
+    "firebase_url": "https://hello-bikroy.firebaseio.com",
+    "project_id": "hello-bikroy",
+    "storage_bucket": "hello-bikroy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596230163999:android:ffc752715399f29817cf2a",
+        "android_client_info": {
+          "package_name": "com.helptimebd.httech.hellobikroy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596230163999-89j1u2gjarovefgkk6ugb64brc4gho13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helptimebd.httech.hellobikroy",
+            "certificate_hash": "52898feef3dc63ebc501afbef735dfd454b7a5a9"
+          }
+        },
+        {
+          "client_id": "596230163999-jej1hspjg9bmc3qvncloir01vmb8gnj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnge_qT8gOW4cRKtxNBLsdkEI0dqO_Xh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596230163999-jej1hspjg9bmc3qvncloir01vmb8gnj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
